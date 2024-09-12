@@ -14,5 +14,6 @@ RUN apt-get -y install apt-utils gcc \
 #WORKDIR /home/user/
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/root" TERM="xterm" USER="root" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C"
+USER root
 RUN echo 'root:password' | chpasswd
 CMD [ "/bin/bash" ]
